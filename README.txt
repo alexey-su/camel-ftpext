@@ -20,8 +20,6 @@ New camel compoent ftpext sintax with proxy:
   // PropertiesComponent have property
   // proxyUrl=http://user:password@proxy.domain.lan/
   // or
-  // proxyUrl=http://DOMAIN\\user:password@proxy.domain.lan/
-  // or
   // proxyUrl=ftp://user:password@proxy.domain.lan/
   // or
   // proxyUrl=socks://user:password@proxy.domain.lan/
