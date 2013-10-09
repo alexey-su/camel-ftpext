@@ -12,22 +12,18 @@ Getting Started
 
 Apache Camel FTP endpoint (ftpext). Read data through a proxy.
 
-Old camel component ftp sintax url without proxy:
-  from("ftp://{{remoteurl}}/")
-  .log("read file from ftp server");
+FtpextComponent Options
+   Name              Default value     Descriptions
+ftpClient.proxyUrl       null          This proxy is used to consume/send messages from the target FTP host.
 
-New camel compoent ftpext sintax with proxy:
-  // PropertiesComponent have property
-  // proxyUrl=http://user:password@proxy.domain.lan/
-  // or
-  // proxyUrl=ftp://user:password@proxy.domain.lan/
-  // or
-  // proxyUrl=socks://user:password@proxy.domain.lan/
-  // or
-  // proxyUrl=socks4://user:password@proxy.domain.lan/
-  
-  from("ftpext://{{remoteurl}}/?ftpClient.proxyUrl={{proxyUrl}}")
-  .log("read file from ftp server ");
+Proxy URL format
+http://[user:password@]proxy.domain.lan:port/
+ftp://[user:password@]proxy.domain.lan:port/
+socks://[user:password@]proxy.domain.lan:port/
+socks4://[user:password@]proxy.domain.lan:port/
+
+Examples
+  ftp://publicftpserver.com/download?ftpClient.proxyUrl=http://user:password@proxy.domain.lan:port/
 
 
 
